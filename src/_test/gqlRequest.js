@@ -5,4 +5,4 @@ function gqlRequest(postData){
     return request(url).post('/').send(postData)
 }
 
-module.exports = gqlRequest()
+module.exports = { gqlRequest }

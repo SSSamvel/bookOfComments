@@ -13,17 +13,14 @@ describe('userCreate', () => {
                 variables: user
             }
             gqlRequest(postData)
-            .expect(200)
-            .end((err, res) => {
-                if (err) return done (err)
-                respData = res.body
-                console.log(respData)
-                //expect(respData).eq()
-                done()
+                .expect(200)
+                .end((err, res) => {
+                    if (err) return done (err)
+                    respData = res.body
+                    console.log(respData)
+                    //expect(respData).eq()
+                    done()
             })
         })
-    });
-    describe('userCreateNegative', () => {
-    
-    });
+    })
 });
