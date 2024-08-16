@@ -5,7 +5,7 @@ const user = {
         }
 }
 const userId = {
-    userId: '66bad48621f088dc0cfb345f'
-  }
+    userId: null
+}
 
 module.exports = { user, userId }
