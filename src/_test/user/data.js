@@ -1,8 +1,11 @@
 const user = {
         userInput: {
-          lastName: 'test1',
-          userId: 'test2'
+          firstName: 'test1',
+          lastName: 'test2'
         }
 }
+const userId = {
+    userId: '66bad48621f088dc0cfb345f'
+  }
 
-module.exports = { user }
+module.exports = { user, userId }
