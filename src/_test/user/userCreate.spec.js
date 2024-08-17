@@ -22,41 +22,6 @@ describe('userCreate', () => {
                 .end((err, res) => {
                     if (err) return done (err)
                     respData = res.body.data.userCreate
-                    console.log(respData)
-                    expect(respData.firstName).eq(user.userInput.firstName)
-                    expect(respData.lastName).eq(user.userInput.lastName)
-                    done()
-            })
-        })
-        
-        it('user create 2', (done) => {
-            postData =  {
-                query: userCreateQ,
-                variables: user
-            }
-            gqlRequest(postData)
-                .expect(200)
-                .end((err, res) => {
-                    if (err) return done (err)
-                    respData = res.body.data.userCreate
-                    console.log(respData)
-                    expect(respData.firstName).eq(user.userInput.firstName)
-                    expect(respData.lastName).eq(user.userInput.lastName)
-                    done()
-            })
-        })
-
-        it('user create 3', (done) => {
-            postData =  {
-                query: userCreateQ,
-                variables: user
-            }
-            gqlRequest(postData)
-                .expect(200)
-                .end((err, res) => {
-                    if (err) return done (err)
-                    respData = res.body.data.userCreate
-                    console.log(respData)
                     expect(respData.firstName).eq(user.userInput.firstName)
                     expect(respData.lastName).eq(user.userInput.lastName)
                     done()
