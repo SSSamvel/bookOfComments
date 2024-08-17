@@ -5,6 +5,8 @@
   "scripts": {
     "test": "mocha ./src/_test/user/userCreate.spec.js",
     "test2": "mocha ./src/_test/user/userGetById.spec.js",
+    "test3": "mocha ./src/_test/user/userDeleteById.spec.js",
+    "test4": "mocha ./src/_test/user/userUpdateById.spec.js",
     "start": "nodemon src/index.js"
   },
   "keywords": [],

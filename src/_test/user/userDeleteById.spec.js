@@ -1,5 +1,5 @@
 const { expect } = require('chai')
-const { userGetByIdQ, userCreateQ } = require('./queries')
+const { userCreateQ, userDeleteByIdq } = require('./queries')
 const { gqlRequest } = require('../gqlRequest')
 const { user } = require('./data')
 
@@ -8,8 +8,8 @@ let respData = null
 let postData = null
 let userID = null
 
-describe('getByID test', () => {
-    describe('getByID test - positive', () => {
+describe('DELETE BY ID', () => {
+    describe('delete by id test - positive', () => {
         before('user create ', (done) => {
             postData = {
                 query: userCreateQ,
@@ -23,9 +23,9 @@ describe('getByID test', () => {
                     done()
             })
         }),
-        it('user get by id', (done) => {
+        it('user delete by id', (done) => {
             postData = {
-                query: userGetByIdQ,
+                query: userDeleteByIdq,
                 variables: {
                     userId: userID
                 }
@@ -34,8 +34,8 @@ describe('getByID test', () => {
                 .expect(200)
                 .end((err, res) => {
                     if (err) return done (err)
-                    respData = res.body.data.userGetById
-                    expect(respData._id).eq(userID)
+                    respData = res.body.data.userDeleteById
+                    expect(respData).eq(true)
                     done()
             })
         })
