@@ -7,9 +7,10 @@ const mongoose = require('mongoose')
 let respData = null
 let postData = null
 
-// before('deleteAllUsers', () => {
-//     return User.deleteMany({})
-// })
+before('deleteAllUsers', () => {
+     User.deleteMany({})
+     console.log('users are deleted')
+})
 describe('userCreate', () => {
     describe('userCreatePositive', () => {
         it('user create 1', (done) => {
