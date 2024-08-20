@@ -22,7 +22,6 @@ describe('userCreate', () => {
             .end((err, res) => {
                 if (err) return done (err)
                 respData = res.body.data.userCreate
-                console.log(respData)
                 process.env.USER_ID = respData._id
                 done()
         })

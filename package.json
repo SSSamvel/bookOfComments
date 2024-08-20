@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha ./src/_test/user/userCreate.spec.js",
-    "test2": "mocha ./src/_test/user/userGetById.spec.js",
-    "test3": "mocha ./src/_test/user/userDeleteById.spec.js",
-    "test4": "mocha ./src/_test/user/userUpdateById.spec.js",
+    "test": "mocha ./src/_test/user/helper.js ./src/_test/user/**.spec.js",
+    "test1": "mocha ./src/_test/user/helper.js ./src/_test/user/5_userCreate.spec.js",
+    "test2": "mocha ./src/_test/user/helper.js ./src/_test/user/3_userUpdateById.spec.js",
+    "test3": "mocha ./src/_test/user/helper.js ./src/_test/user/4_userDeleteById.spec.js",
+    "test4": "mocha ./src/_test/user/helper.js ./src/_test/user/1_userGetById.spec.js",
     "start": "nodemon src/index.js"
   },
   "keywords": [],
