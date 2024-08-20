@@ -8,6 +8,7 @@
     "test2": "mocha ./src/_test/user/helper.js ./src/_test/user/3_userUpdateById.spec.js",
     "test3": "mocha ./src/_test/user/helper.js ./src/_test/user/4_userDeleteById.spec.js",
     "test4": "mocha ./src/_test/user/helper.js ./src/_test/user/1_userGetById.spec.js",
+    "test5": "mocha ./src/_test/user/helper.js ./src/_test/user/2_usersGetAll.spec.js",
     "start": "nodemon src/index.js"
   },
   "keywords": [],
