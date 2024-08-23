@@ -7,9 +7,9 @@ const { user } = require('./data')
 let respData = null
 let postData = null
 
-describe('getByID test', () => {
-    describe('getByID test - positive', () => {
-        it('user get by id', (done) => {
+describe('getAll test', () => {
+    describe('getAll test - positive', () => {
+        it('user get all', (done) => {
             postData = {
                 query: usersGetAllq,
                 variables: {
@@ -22,7 +22,6 @@ describe('getByID test', () => {
                     if (err) return done (err)
                     respData = res.body.data.usersGetAll
                     console.log(respData.length)
-                    //expect(respData.length)
                     done()
             })
         })
