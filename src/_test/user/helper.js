@@ -2,6 +2,7 @@ const { userCreateQ } = require('./queries')
 const { user } = require('./data')
 const { gqlRequest } = require('../gqlRequest')
 const User = require('../../models/User')
+const mongoose = require('mongoose');
 
 let respData = null
 let postData = null

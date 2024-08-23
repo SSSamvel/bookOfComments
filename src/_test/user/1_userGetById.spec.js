@@ -23,7 +23,7 @@ describe('getByID test', () => {
                     respData = res.body.data.userGetById
                     expect(respData.firstName).eq(user.userInput.firstName)
                     //user.userInput._id = process.env.USER_ID
-                    //expect(respData).to.deep.equal(user.userInput)
+                    //console.log(user.userInput)
                     done()
             })
         })
